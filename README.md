@@ -34,7 +34,7 @@ npm run dev
 npm run build
 ```
 
-### Activate Icon Usage on the app
+### Activate Icon Usage 
 
 ```sh
 npm install --save-dev @iconify/vue
