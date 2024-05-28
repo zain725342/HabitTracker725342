@@ -1,6 +1,6 @@
 # HabitTracker725342
 Basic habit tracking app built in vue 3 that uses local storage
-# Habitual
+# habitual
 
 This template should help get you started developing with Vue 3 in Vite.
 
