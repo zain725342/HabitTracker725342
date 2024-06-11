@@ -4,7 +4,7 @@ import Indicator from "@/components/Indicator.vue";
 import { ref, onMounted, watch } from "vue";
 import type { habit } from "@/types";
 const current_date = ref(new Date());
-const stored_date = ref(null);
+const stored_date = ref<number | null>(null);
 
 const data = ref([
   {
@@ -31,9 +31,11 @@ const setData = () => {
     stored_date.value = JSON.parse(
       localStorage.getItem("habits_date") as string
     );
+    if (stored_date.value == null) {
+      stored_date.value = 0;
+    }
     if (
-      stored_date.value &&
-      data.value &&
+      stored_date.value != null &&
       stored_date.value < current_date.value.getDate()
     ) {
       data.value.forEach((d) => {
